@@ -1,0 +1,26 @@
+server:
+  port: 8761
+
+spring:
+  application:
+    name: My-Service-registry
+
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+
+management:
+  info:
+    env:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: info, health
+
+info:
+  app:
+    name: Service Registry
+    description: Spring Cloud Discovery Application
+    version: 1.0.0
